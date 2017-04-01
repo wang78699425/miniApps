@@ -11,7 +11,7 @@ $config = [
             'enablePrettyUrl' => true,//对url进行美化
             'showScriptName' => false,//隐藏index.php
             'enableStrictParsing' => false,//不要求网址严格匹配，则不需要输入rules
-            'rules' => require(__DIR__ . '/route-params.php')
+//            'rules' => require(__DIR__ . '/route-params.php')
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
