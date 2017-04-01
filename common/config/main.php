@@ -1,6 +1,8 @@
 <?php
 $config = [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'timeZone' => 'Asia/Shanghai', //time zone affect the formatter datetime format
+    'language' => 'zh-CN',
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -8,7 +10,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,//对url进行美化
             'showScriptName' => false,//隐藏index.php
-//            'enableStrictParsing' => false,//不要求网址严格匹配，则不需要输入rules
+            'enableStrictParsing' => false,//不要求网址严格匹配，则不需要输入rules
             'rules' => require(__DIR__ . '/route-params.php')
         ],
         'log' => [
