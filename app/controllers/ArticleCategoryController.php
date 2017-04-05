@@ -13,14 +13,14 @@ use yii\filters\VerbFilter;
  */
 class ArticleCategoryController extends Controller
 {
-    public $modelClass = 'common\models\articlecategory';
 
     /**
      * @inheritdoc
      */
     public function behaviors()
     {
-        return [
+        return parent::behaviors() +
+            [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
