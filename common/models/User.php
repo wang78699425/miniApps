@@ -50,18 +50,15 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function rules()
     {
-        return [
-            ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
-        ];
+
     }
 
     /**
      * @inheritdoc
      */
-    public static function findIdentity($id)
+    public static function findIdentity($uid)
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['uid' => $uid]);
     }
 
     /**
@@ -80,7 +77,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findByUsername($username)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['username' => $username]);
     }
 
     /**
@@ -150,7 +147,11 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
+        if (md5($password . $this->auth_key . 'miniApps') != $this->password) {
+            return false;
+        }
+        return true;
+//        return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
     /**
