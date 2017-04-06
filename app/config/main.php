@@ -9,17 +9,26 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'backend\controllers',
+    'controllerNamespace' => 'app\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
         ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,//对url进行美化
+            'showScriptName' => false,//隐藏index.php
+            'enableStrictParsing' => false,//不要求网址严格匹配，则不需要输入rules
+            'rules' => require(__DIR__ . '/../../common/config/route-params.php')
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
