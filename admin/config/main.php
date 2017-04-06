@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'article-category',
-    'controllerNamespace' => 'app\controllers',
+    'controllerNamespace' => 'admin\controllers',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

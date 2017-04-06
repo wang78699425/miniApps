@@ -27,7 +27,7 @@ $config = [
                     // 被收集记录的额外数据
                     'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE'],
                     // 指定日志保存的文件名
-                    'logFile' => '@app/runtime/logs/error/app.log',
+                    'logFile' => '@admin/runtime/logs/error/app.log',
                     // 是否开启日志 (@app/runtime/logs/error/20151223_app.log)
                 ],
                 /**
@@ -41,7 +41,7 @@ $config = [
                     // 被收集记录的额外数据
                     'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION'],
                     // 指定日志保存的文件名
-                    'logFile' => '@app/runtime/logs/warning/app.log',
+                    'logFile' => '@admin/runtime/logs/warning/app.log',
                     // 是否开启日志 (@app/runtime/logs/warning/20151223_app.log)
                 ],
                 /**
@@ -55,7 +55,7 @@ $config = [
                     // 被收集记录的额外数据
                     'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION'],
                     // 指定日志保存的文件名
-                    'logFile' => '@app/runtime/logs/info/app.log',
+                    'logFile' => '@admin/runtime/logs/info/app.log',
                     // 是否开启日志 (@app/runtime/logs/info/20151223_app.log)
                 ],
                 /**
@@ -69,7 +69,7 @@ $config = [
                     // 被收集记录的额外数据
                     'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION'],
                     // 指定日志保存的文件名
-                    'logFile' => '@app/runtime/logs/trace/app.log',
+                    'logFile' => '@admin/runtime/logs/trace/app.log',
                     // 是否开启日志 (@app/runtime/logs/trace/20151223_app.log)
                 ],
                 [
@@ -77,14 +77,14 @@ $config = [
                     'levels' => ['info'],
                     'logVars' => [], //除了except对应的分类之外，其他的都写入到
                     'categories' => ['curl'],
-                    'logFile' => '@app/runtime/logs/curl/app.log',
+                    'logFile' => '@admin/runtime/logs/curl/app.log',
                 ],
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['info'],
                     'categories' => ['request'],
                     'logVars' => [], //除了except对应的分类之外，其他的都写入到
-                    'logFile' => '@app/runtime/logs/request/app.log',
+                    'logFile' => '@admin/runtime/logs/request/app.log',
                 ],
             ],
         ],

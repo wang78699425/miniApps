@@ -1,5 +1,5 @@
 <?php
-namespace app\controllers;
+namespace admin\controllers;
 
 use Yii;
 use yii\base\InvalidParamException;
@@ -8,10 +8,10 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-use app\models\PasswordResetRequestForm;
-use app\models\ResetPasswordForm;
-use app\models\SignupForm;
-use app\models\ContactForm;
+use admin\models\PasswordResetRequestForm;
+use admin\models\ResetPasswordForm;
+use admin\models\SignupForm;
+use admin\models\ContactForm;
 
 /**
  * Site controller
