@@ -17,7 +17,7 @@ use admin\models\ContactForm;
  * Site controller
  */
 class SiteController extends Controller
-{
+{ 
     /**
      * @inheritdoc
      */
