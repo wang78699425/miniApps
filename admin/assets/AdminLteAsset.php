@@ -10,6 +10,7 @@ use dmstr\web\AdminLteAsset as baseAdminLteAsset;
 class AdminLteAsset extends baseAdminLteAsset
 {
     /**
+     * 皮肤
      * @var string|bool Choose skin color, eg. `'skin-blue'` or set `false` to disable skin loading
      * @see https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html#layout
      */
